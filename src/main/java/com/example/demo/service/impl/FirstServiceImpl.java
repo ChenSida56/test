@@ -17,7 +17,7 @@ public class FirstServiceImpl implements FirstService {
 
     @Override
     public Map use(String name, Integer weight) {
-        int i = dogMapper.insert(new Dog(name, weight));
+        int i = dogMapper.insert(new Dog(name, weight + 100));
         Map map = new HashMap(2);
         map.put("i", i);
         map.put("euceess", Boolean.valueOf(i + ""));
